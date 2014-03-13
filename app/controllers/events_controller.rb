@@ -18,7 +18,10 @@ class EventsController < ApplicationController
 
             format.xml {render xml: @events}
 
-            format.json {render json: @events}
+            #format.json {render json: @events}
+
+            # Busca fichero para renderizar ,.erb,.builder ,...,
+            format.json
 
         end
 
