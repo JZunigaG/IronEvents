@@ -1,0 +1,25 @@
+<ul>
+	<% @events.each do |event| %>
+
+		<li>
+<!--			
+			<%= event.name %>
+
+			<%= event.description %> 
+
+			<%= event.address %> 
+
+			<%= event.start_at.strftime("%Y-%m-%d %T.%L") %>
+
+			<%= event.end_at.strftime("%Y-%m-%d %T.%L") %>
+-->
+
+			<%= debug(event) %>
+
+			<%= link_to('Delete event...',event_path(event),method: :delete,data: {confirm: 'Are you sure?'}) %>
+
+		</li>
+
+	<% end %>
+
+</ul>

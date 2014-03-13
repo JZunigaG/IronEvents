@@ -1,0 +1,54 @@
+<% if @event.errors.any? %>
+
+	<ul>
+
+		<% @event.errors.full_messages.each do |error_msg| %>
+
+			<li><%= error_msg %></li>
+
+		<% end %>
+
+	</ul>
+
+<% end %>
+
+
+
+<%= form_for [@event] do |f| %>
+
+	<%= f.label :name %>
+
+	<%= f.text_field :name %>
+
+	<br>
+
+	<%= f.label :description %>
+
+	<%= f.text_field :description %>
+
+	<br>
+
+	<%= f.label :address %>
+
+	<%= f.text_field :address %>
+
+	<br>
+
+	<%= f.label :start_at %>
+
+	<%= f.date_field :start_at %>
+
+	<br>
+
+	<%= f.label :end_at %>
+
+	<%= f.date_field :end_at %>
+
+	<br>
+
+	<%= f.submit 'Save' %>
+
+<%end%>
+
+<br>
+
