@@ -30,6 +30,13 @@ class Event < ActiveRecord::Base
 	end
 
 
+	def self.events_filtered_by_name(characters)
+
+		where(["name like ?","#{characters}%"])
+
+	end
+
+
 	private
 
 	def start_at_is_present

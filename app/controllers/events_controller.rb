@@ -130,9 +130,19 @@ class EventsController < ApplicationController
             flash[:alert] = "Event to delete does not exits"
 
         end
-    
-    
+   
     end
+
+
+    def search
+
+        @events_filtered_by_name = Event.events_filtered_by_name(params[:term])
+
+        #@events_filtered.collect! { |event| event.name }
+
+        #render 'search'
+
+    end    
 
 
     private
